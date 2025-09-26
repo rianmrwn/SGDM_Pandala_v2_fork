@@ -23,16 +23,16 @@ def parse_args() -> Namespace:
     )
     parser.add_argument(
         "--config",
-        default="configs/model/refsr_simu.yaml",
+        default="SGDM/configs/model/refsr_simu.yaml",
         type=str,
         help="model config path",
     )
     parser.add_argument(
-        "--val_config", type=str, default="configs/dataset/reference_sr_val_simu.yaml"
+        "--val_config", type=str, default="SGDM/configs/dataset/reference_sr_val_simu.yaml"
     )
     # FlowSampler-sampleFromTrain
     parser.add_argument(
-        "--output", type=str, default="/mnt/massive/wangce/SGDM/DiffBIR-exp/test-MBD"
+        "--output", type=str, default="SGDM/output"
     )
     parser.add_argument("--steps", default=50, type=int)
     parser.add_argument("--seed", type=int, default=231)
@@ -41,7 +41,6 @@ def parse_args() -> Namespace:
     )
 
     return parser.parse_args()
-
 
 def check_device(device):
     if device == "cuda":

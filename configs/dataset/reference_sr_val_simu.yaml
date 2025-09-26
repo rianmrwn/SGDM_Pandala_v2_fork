@@ -1,8 +1,7 @@
 dataset:
   target: dataset.LRHRRef.LRHRRefDataset
   params:
-    # Path to the file list.
-    dataroot: /mnt/massive/wangce/SGDM/dataset/MBD
+    dataroot: SGDM/dataset/MBD
 
     l_resolution: 16
     r_resolution: 256

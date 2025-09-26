@@ -140,8 +140,8 @@ class FrozenOpenCLIPEmbedder(AbstractEncoder):
         "last",
         "penultimate"
     ]
-    # def __init__(self, arch="ViT-H-14", version="laion2b_s32b_b79k", device="cuda", max_length=77,
-    def __init__(self, arch="ViT-H-14", version="./checkpoints/open_clip_pytorch_model.bin", max_length=77,
+    def __init__(self, arch="ViT-H-14", version="laion2b_s32b_b79k", device="cuda", max_length=77,
+    # def __init__(self, arch="ViT-H-14", version="./checkpoints/open_clip_pytorch_model.bin", max_length=77,
                  freeze=True, layer="last"):
         super().__init__()
         assert layer in self.LAYERS

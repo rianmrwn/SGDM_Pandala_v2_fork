@@ -5,7 +5,6 @@ from omegaconf import OmegaConf
 import torch
 from utils.common import instantiate_from_config, load_state_dict
 
-
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument("--config", type=str, default="configs/train_refsr_simu.yaml")
@@ -26,7 +25,6 @@ def main() -> None:
         callbacks.append(instantiate_from_config(callback_config))
     trainer = pl.Trainer(callbacks=callbacks, **config.lightning.trainer)
     trainer.fit(model, datamodule=data_module)
-
 
 if __name__ == "__main__":
     main()

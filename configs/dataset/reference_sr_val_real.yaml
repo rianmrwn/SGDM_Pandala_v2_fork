@@ -3,7 +3,8 @@ dataset:
   params:
     # Path to the file list.
     # dataroot: /mnt/massive/wangce/map-sat/dataset/S2-Arcgis/random_hr_val/val-flower
-    dataroot: /mnt/massive/wangce/SGDM/dataset/S2-Arcgis/val
+    # dataroot: /mnt/massive/wangce/SGDM/dataset/S2-Arcgis/val
+    dataroot: SGDM/dataset/MBD
     # dataroot: /mnt/massive/wangce/map-sat/dataset/Synthetic-v18-45k/exp-val
     # dataroot: /mnt/massive/wangce/map-sat/dataset/S2-Arcgis/forest_hr_val
     # dataroot: /mnt/massive/wangce/map-sat/dataset/Synthetic-v18-45k/val

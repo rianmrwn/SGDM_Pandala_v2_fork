@@ -35,37 +35,35 @@ def parse_args() -> Namespace:
     )
     parser.add_argument(
         "--ckpt_flow_mean",
-        default="model/Flows/checkpoints/flow_tanh_mini_mean",
+        default="SGDM/model/Flows/checkpoints/flow_tanh_mini_mean",
         type=str,
         help="full checkpoint path",
     )
     parser.add_argument(
         "--ckpt_flow_std",
-        default="model/Flows/checkpoints/flow_tanh_mini_std",
+        default="SGDM/model/Flows/checkpoints/flow_tanh_mini_std",
         type=str,
         help="full checkpoint path",
     )
     parser.add_argument(
         "--config",
-        default="configs/model/refsr_real.yaml",
+        default="SGDM/configs/model/refsr_real.yaml",
         type=str,
         help="model config path",
     )
     parser.add_argument(
-        "--val_config", type=str, default="configs/dataset/reference_sr_val_real.yaml"
+        "--val_config", type=str, default="SGDM/configs/dataset/reference_sr_val_real.yaml"
     )
     # FlowSampler-sampleFromTrain
     parser.add_argument(
-        "--output", type=str, default="/mnt/massive/wangce/SGDM/DiffBIR-exp/test-randn-hr-guide-style"
+        "--output", type=str, default="SGDM/DiffBIR-exp/test-randn-hr-guide-style"
     )
     parser.add_argument("--steps", default=50, type=int)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument(
         "--device", type=str, default="cuda:1", choices=["cpu", "cuda", "mps"]
     )
-
     return parser.parse_args()
-
 
 def check_device(device):
     if device == "cuda":
@@ -178,7 +176,6 @@ def main() -> None:
         os.path.join(args.output, f"psnr-{round(psnr, 3)}-lpips-{round(lpips, 3)}"),
         exist_ok=True,
     )
-
 
 if __name__ == "__main__":
     main()
